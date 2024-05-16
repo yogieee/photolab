@@ -7,7 +7,9 @@ import User from "../database/models/user.model";
 import Image from "../database/models/image.model";
 import { redirect } from "next/navigation";
 
-import { v2 as cloudinary } from "cloudinary";
+import cloudinaryLib from "cloudinary";
+
+const cloudinary = cloudinaryLib.v2;
 
 const populateUser = (query: any) =>
   query.populate({
